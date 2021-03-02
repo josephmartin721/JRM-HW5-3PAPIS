@@ -14,10 +14,10 @@ $(document).ready(function () {
     $("#time10 .description").val(localStorage.getItem("time10"));
     $("#time11 .description").val(localStorage.getItem("time11"));
     $("#timenoon .description").val(localStorage.getItem("timenoon"));
-    $("#oneafternoon .description").val(localStorage.getItem("oneafternoon"));
-    $("#twoafternoon .description").val(localStorage.getItem("twoafternoon"));
-    $("#threeafternoon .description").val(localStorage.getItem("threeafternoon"));
-    $("#fourafternoon .description").val(localStorage.getItem("fourafternoon"));
+    $("#1pm .description").val(localStorage.getItem("1pm"));
+    $("#2pm .description").val(localStorage.getItem("2pm"));
+    $("#3pm .description").val(localStorage.getItem("3pm"));
+    $("#4pm .description").val(localStorage.getItem("4pm"));
 
     function hourTracker() {
         var currentHour = moment().hour();
