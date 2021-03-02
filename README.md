@@ -5,6 +5,7 @@ This assignment was meant to train the ability to manage local storage and time 
 
 ## Function
 The scheduler is capable of the following
+-displaying the current date and time
 -presenting separate time blocks that can be clicked into
 -have text written into those time blocks
 -keeping regular buisiness hours between 8am to 4pm

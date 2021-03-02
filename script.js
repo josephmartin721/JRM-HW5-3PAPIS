@@ -1,5 +1,7 @@
 $(document).ready(function () {
-    $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a")); 
+    
+    $("#currentDay").text(moment().format('dddd'));
+    $("#currentTime").text(moment().format("MMMM Do YYYY, h:mm:ss a")); 
     
     $(".btn").on("click", function () {
        
@@ -9,6 +11,9 @@ $(document).ready(function () {
 
         localStorage.setItem(time, text);
     })
+    
+    //Timeblocks must change according to current time
+    
     $("#time8 .description").val(localStorage.getItem("time8"));
     $("#time9 .description").val(localStorage.getItem("time9"));
     $("#time10 .description").val(localStorage.getItem("time10"));
@@ -19,11 +24,12 @@ $(document).ready(function () {
     $("#3pm .description").val(localStorage.getItem("3pm"));
     $("#4pm .description").val(localStorage.getItem("4pm"));
 
+
     function hourTracker() {
         var currentHour = moment().hour();
 
         $(".time-block").each(function () {
-            var blockHour = parseInt($(this).attr("id").split("hour")[1]);
+            var blockHour = parseInt($(this).attr("id").split("#hour")[1]);
             console.log( blockHour, currentHour)
 
             if (blockHour < currentHour) {
